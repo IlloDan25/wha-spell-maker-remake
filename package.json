@@ -1,0 +1,43 @@
+{
+    "name": "wha-spell-maker",
+    "type": "module",
+    "engines": {
+        "node": ">=24"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^7.2.0",
+        "@json-editor/json-editor": "^2.16.0",
+        "bootstrap": "^5.3.8",
+        "dompurify": "^3.4.17",
+        "handlebars": "^4.7.10",
+        "mini-jsx": "^4.0.0",
+        "p5": "^2.4.0"
+    },
+    "devDependencies": {
+        "@cloudflare/vite-plugin": "^1.67.0",
+        "@cloudflare/workers-types": "^5.20260815.1",
+        "@eslint/js": "^9.39.5",
+        "@types/node": "^25.6.0",
+        "@types/p5": "^1.7.7",
+        "eslint": "^10.15.0",
+        "json-schema-to-typescript": "^15.0.4",
+        "json-to-ts": "^2.1.0",
+        "sass": "^1.97.3",
+        "terser": "^5.46.1",
+        "typescript": "^5.9.3",
+        "typescript-eslint": "^8.74.0",
+        "vite": "^7.3.7",
+        "vite-plugin-sitemap": "^0.8.2",
+        "wrangler": "^4.156.1"
+    },
+    "scripts": {
+        "dev": "vite",
+        "build": "npm run make && vite build",
+        "preview": "npm run build && wrangler dev",
+        "clean": "rm -fr dist",
+        "make": "npm run symbols && npm run types",
+        "symbols": "python3 tools/symbols.py",
+        "types": "for f in src/schemas/*.json; do npx json2ts \"$f\" > \"types/$(basename \"${f%.json}.d.ts\")\"; done",
+        "deploy": "npm run build && wrangler deploy"
+    }
+}

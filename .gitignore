@@ -1,0 +1,16 @@
+.vscode/
+node_modules/
+dist/
+extra/
+
+types/*
+!types/symbols.d.ts
+
+src/data/symbols.json
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example

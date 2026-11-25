@@ -1,0 +1,38 @@
+{
+  "name": "Crystal Petals Path",
+  "author": "Ok668",
+  "description": "This spell is similar to the Glowstone Path spell, but instead of generating light it generates crystalized petals that emerge from underneath the stones containing the seals when stepped on.\nUsing the crystal sigil and the flower petal sign for the base of the spell, the spaces in between the flower petal sign will accommodate the float sign and the repulsion sign to make the flower pop out of the flower the spell is under.\n\nCreated by @Okay668",
+  "seals": [
+    {
+      "rings": [
+        {}
+      ],
+      "sigils": [
+        {
+          "name": "sigil_Crystalize",
+          "size": 250
+        },
+        {
+          "name": "sigil_Flower (Clean)",
+          "size": 950
+        }
+      ],
+      "signs": [
+        {
+          "name": "sign_Dispersion",
+          "size": 250,
+          "radius": 290,
+          "amount": 5,
+          "rotation": 36
+        },
+        {
+          "name": "sign_Float",
+          "size": 170,
+          "radius": 270,
+          "amount": 10,
+          "rotation": 18
+        }
+      ]
+    }
+  ]
+}
